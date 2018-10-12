@@ -132,11 +132,11 @@ class About extends Component {
                 frontmatter.skills.map((skill, i) => <Skill key={i}>{skill}</Skill>)}
             </SkillsContainer>
           </ContentContainer>
-          <PicContainer>
+          {/* <PicContainer>
             <AvatarContainer>
               <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" />
             </AvatarContainer>
-          </PicContainer>
+          </PicContainer> */}
         </FlexContainer>
       </AboutContainer>
     );

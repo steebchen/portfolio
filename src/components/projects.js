@@ -216,9 +216,11 @@ class Projects extends Component {
           </TransitionGroup>
         </ProjectsGrid>
 
-        <ShowMoreButton onClick={this.showMoreToggle}>
-          {showMore ? 'Fewer' : 'More'} Projects
-        </ShowMoreButton>
+        {projects.length > GRID_LIMIT && (
+          <ShowMoreButton onClick={this.showMoreToggle}>
+            {showMore ? 'Fewer' : 'More'} Projects
+          </ShowMoreButton>
+        )}
       </ProjectsContainer>
     );
   }

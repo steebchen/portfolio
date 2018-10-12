@@ -1,7 +1,7 @@
 ---
 title: 'Hi! I am'
 name: 'Luca Steeb'
-subtitle: 'I build cloud technologies.'
+subtitle: 'I build cloud software.'
 contactText: 'Get In Touch'
 ---
 
