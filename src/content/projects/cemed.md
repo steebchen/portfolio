@@ -6,7 +6,6 @@ tech:
   - Angular
   - Cordova
   - Typescript
-show: 'true'
 ---
 
 I developed an interactive app using Angular for Cemed. It introduces the PerformancePack®, which is an all-in-one solution for surgeries in hospitals.

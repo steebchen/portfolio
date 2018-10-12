@@ -113,18 +113,16 @@ export const query = graphql`
       }
     }
     projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      filter: { fileAbsolutePath: { regex: "/content/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
           frontmatter {
             title
-            image
             tech
             github
             external
-            show
           }
           html
         }

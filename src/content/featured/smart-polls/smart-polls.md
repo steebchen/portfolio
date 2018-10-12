@@ -2,7 +2,7 @@
 date: '2015-01-01'
 title: 'SmartPolls'
 stats: '22.000.000+ pageviews'
-cover: './halcyon.png'
+cover: './lp.jpg'
 github: ''
 external: 'https://smart-polls.net/'
 tech:

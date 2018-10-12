@@ -114,12 +114,10 @@ const FeaturedImg = styled(Img)`
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
-  filter: grayscale(100%) contrast(1) brightness(90%);
   ${media.tablet`
     object-fit: cover;
     width: auto;
     height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
   `};
   }
 `;

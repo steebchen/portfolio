@@ -60,7 +60,6 @@ const Avatar = styled(Img)`
   max-width: 100%;
   vertical-align: middle;
   position: relative;
-  filter: grayscale(100%) contrast(1);
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
 `;

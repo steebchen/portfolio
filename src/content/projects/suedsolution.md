@@ -1,8 +1,6 @@
 ---
-date: '2014-01-01'
+date: '2014-02-01'
 title: 'Südsolutions Company Site'
-cover: './v3.png'
-github: ''
 external: 'https://www.suedsolutions.de/'
 tech:
   - Wordpress

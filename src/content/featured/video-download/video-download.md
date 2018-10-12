@@ -1,7 +1,7 @@
 ---
 date: '2016-01-01'
 title: 'Video download'
-cover: './blistabloc.png'
+cover: './lp.jpg'
 stats: '100.000.000+ pageviews'
 github: ''
 external: 'https://video-download.co/'

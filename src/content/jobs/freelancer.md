@@ -3,7 +3,7 @@ date: '2018-01-01'
 title: 'Freelancer'
 company: 'Luca Steeb'
 range: '2015 – now'
-url: 'https://www.suedsolutions.de/'
+url: '/'
 ---
 
 - Designing and building complete websites with React, Vue and Gatsby

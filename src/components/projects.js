@@ -139,8 +139,7 @@ class Projects extends Component {
   render() {
     const GRID_LIMIT = 6;
     const { showMore } = this.state;
-    const { data } = this.props;
-    const projects = data.filter(({ node }) => node.frontmatter.show === 'true');
+    const { data: projects } = this.props;
     const firstSix = projects.slice(0, GRID_LIMIT);
     const projectsToShow = showMore ? projects : firstSix;
 
@@ -206,9 +205,8 @@ class Projects extends Component {
                       </ProjectTop>
                       <ProjectBottom>
                         <TechList>
-                          {node.frontmatter.tech.map((tech, i) => (
-                            <li key={i}>{tech}</li>
-                          ))}
+                          {node.frontmatter.tech &&
+                            node.frontmatter.tech.map((tech, i) => <li key={i}>{tech}</li>)}
                         </TechList>
                       </ProjectBottom>
                     </ProjectInner>
