@@ -6,7 +6,7 @@ module.exports = {
   siteLanguage: 'en_US',
   siteImage: 'https://luca-steeb.com/og.png',
 
-  googleVerification: 'TODO',
+  googleVerification: 'zXuUDqaJPYKMclGSBRUESUB0M5wXzRLfohg1ShrCRSY',
 
   name: 'Luca Steeb',
   location: 'Stuttgart, Germany',
@@ -15,6 +15,10 @@ module.exports = {
     {
       name: 'Github',
       url: 'https://github.com/steebchen/',
+    },
+    {
+      name: 'Stackoverflow',
+      url: 'https://stackoverflow.com/users/3062017/luca-steeb',
     },
     {
       name: 'Linkedin',

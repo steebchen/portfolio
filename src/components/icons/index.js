@@ -5,6 +5,7 @@ import IconInstagram from './instagram';
 import IconTwitter from './twitter';
 import IconExternal from './external';
 import IconFolder from './folder';
+import IconStackoverflow from './stackoverflow';
 import IconLocation from './location';
 
 export {
@@ -15,5 +16,6 @@ export {
   IconTwitter,
   IconExternal,
   IconFolder,
+  IconStackoverflow,
   IconLocation,
 };

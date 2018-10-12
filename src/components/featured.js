@@ -41,12 +41,19 @@ const FeaturedLabel = styled.h4`
 const ProjectName = styled.h5`
   font-size: 28px;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0 0 5px;
   color: ${theme.colors.lightestSlate};
   ${media.tablet`font-size: 24px;`};
   a {
     ${media.tablet`display: block;`};
   }
+`;
+const ProjectStats = styled.h6`
+  font-size: 20px;
+  font-family: ${theme.fonts.SFMono};
+  font-weight: 600;
+  margin: 0 0 20px;
+  color: ${theme.colors.lightestSlate};
 `;
 const ProjectDescription = styled.div`
   background-color: ${theme.colors.lightNavy};
@@ -223,6 +230,9 @@ class Featured extends Component {
                       node.frontmatter.title
                     )}
                   </ProjectName>
+
+                  {node.frontmatter.stats && <ProjectStats>{node.frontmatter.stats}</ProjectStats>}
+
                   <ProjectDescription dangerouslySetInnerHTML={{ __html: node.html }} />
                   {node.frontmatter.tech && (
                     <TechList>
@@ -231,6 +241,7 @@ class Featured extends Component {
                       ))}
                     </TechList>
                   )}
+
                   <Links>
                     {node.frontmatter.github && (
                       <A
