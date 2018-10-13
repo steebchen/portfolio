@@ -1,7 +1,6 @@
 ---
 date: '2018-01-01'
 title: 'Freelancer'
-company: 'Luca Steeb'
 range: '2016 – now'
 url: '/'
 ---

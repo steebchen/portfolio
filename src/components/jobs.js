@@ -184,7 +184,7 @@ class Jobs extends Component {
                   aria-controls={`tab${i}`}
                   id={`tab${i}`}
                   tabindex={this.isActive(i) ? '0' : '-1'}>
-                  <span>{node.frontmatter.company}</span>
+                  <span>{node.frontmatter.company || node.frontmatter.title}</span>
                 </Tab>
               ))}
             <Highlighter activeTabId={activeTabId} />
@@ -202,15 +202,17 @@ class Jobs extends Component {
                   aria-hidden={!this.isActive(i)}>
                   <JobTitle>
                     <span>{node.frontmatter.title}</span>
-                    <Company>
-                      &nbsp;@&nbsp;
-                      <a
-                        href={node.frontmatter.url}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer">
-                        {node.frontmatter.company}
-                      </a>
-                    </Company>
+                    {node.frontmatter.company && (
+                      <Company>
+                        &nbsp;@&nbsp;
+                        <a
+                          href={node.frontmatter.url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer">
+                          {node.frontmatter.company}
+                        </a>
+                      </Company>
+                    )}
                   </JobTitle>
                   <JobDetails>
                     <span>{node.frontmatter.range}</span>
