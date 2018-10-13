@@ -53,7 +53,7 @@ const theme = {
   margin: '20px',
 
   tabHeight: 42,
-  tabWidth: 120,
+  tabWidth: 140,
 
   gradient: `linear-gradient(0.4turn, #64d6ff, #64ffda)`,
 

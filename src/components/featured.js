@@ -127,7 +127,6 @@ const ImgContainer = styled.div`
   position: relative;
   z-index: 1;
   border-radius: ${theme.borderRadius};
-  background-color: ${theme.colors.green};
   border-radius: 2px;
   grid-column: 6 / -1;
   grid-row: 1 / -1;
@@ -139,10 +138,8 @@ const ImgContainer = styled.div`
   `};
   &:hover,
   &:focus {
-    background: transparent;
     &:before,
     ${FeaturedImg} {
-      background: transparent;
       filter: none;
     }
   }
