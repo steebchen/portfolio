@@ -78,6 +78,8 @@ const TechList = styled(Ul)`
   display: flex;
   flex-wrap: wrap;
   margin: 25px 0 10px;
+  padding-right: 45px;
+  ${media.thone`padding: 0 !important;`};
   li {
     font-family: ${theme.fonts.SFMono};
     font-size: ${theme.fontSizes.smallish};
@@ -166,6 +168,8 @@ const Project = styled.div`
       ${media.phablet`padding: 30px 25px 20px;`};
     }
     ${TechList} {
+      padding-right: 0;
+      padding-left: 45px;
       justify-content: flex-end;
       li {
         margin-left: ${theme.margin};

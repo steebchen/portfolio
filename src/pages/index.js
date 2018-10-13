@@ -80,7 +80,6 @@ export const query = graphql`
           frontmatter {
             title
             company
-            location
             range
             url
           }

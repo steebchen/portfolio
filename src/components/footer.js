@@ -42,7 +42,7 @@ const Copy = styled(P)`
   margin: 5px 0 3px;
 `;
 const GithubLink = styled(A)`
-  ${mixins.link};
+  color: ${theme.colors.green};
 `;
 
 const Footer = () => (
@@ -76,12 +76,12 @@ const Footer = () => (
       </SocialItemList>
     </SocialContainer>
     <Copy>
-      This site was actually designed &amp; built by
+      This site was actually designed &amp; built by&nbsp;
       <GithubLink
         href="https://github.com/bchiang7/v4"
         target="_blank"
         rel="nofollow noopener noreferrer">
-        &nbsp;Brittany Chiang
+        Brittany Chiang
       </GithubLink>
       . I'm busy enough building the backend of my cloud apps.
     </Copy>
