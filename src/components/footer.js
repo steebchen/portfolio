@@ -2,10 +2,10 @@ import React from 'react';
 
 import { socialMedia } from '../config';
 
-import { IconGithub, IconLinkedin, IconInstagram, IconTwitter } from './icons';
+import { IconGithub, IconLinkedin, IconInstagram, IconTwitter, IconStackoverflow } from './icons';
 
 import styled from 'styled-components';
-import { theme, mixins, media, A, P, Ul, Section } from '../styles';
+import { theme, mixins, media, A, P, Ul } from '../styles';
 
 const FooterContainer = styled.footer`
   ${mixins.flexCenter};
@@ -63,10 +63,12 @@ const Footer = () => (
                   <IconLinkedin />
                 ) : name === 'Instagram' ? (
                   <IconInstagram />
+                ) : name === 'Stackoverflow' ? (
+                  <IconStackoverflow />
                 ) : name === 'Twitter' ? (
                   <IconTwitter />
                 ) : (
-                  <IconGithub />
+                  '–'
                 )}
               </SocialLink>
             </SocialItem>

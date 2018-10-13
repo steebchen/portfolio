@@ -80,7 +80,7 @@ class Social extends Component {
                         ) : name === 'Twitter' ? (
                           <IconTwitter />
                         ) : (
-                          <IconGithub />
+                          '–'
                         )}
                       </SocialLink>
                     </SocialItem>

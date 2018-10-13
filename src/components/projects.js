@@ -131,7 +131,7 @@ class Projects extends Component {
 
   componentDidMount() {
     ScrollReveal().reveal(this.projects, srConfig());
-    this.revealRefs.forEach((ref, i) => ScrollReveal().reveal(ref, srConfig(i * 100)));
+    this.revealRefs.forEach((ref, i) => ScrollReveal().reveal(ref, srConfig(i * 10)));
   }
 
   showMoreToggle = () => this.setState({ showMore: !this.state.showMore });
