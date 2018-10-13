@@ -60,5 +60,13 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*.js': ['Cache-Control: public, max-age=31536000, immutable'],
+        },
+      },
+    },
   ],
 };
