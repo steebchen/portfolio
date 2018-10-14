@@ -64,6 +64,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
+          '/': ['Strict-Transport-Security: max-age=63072000; includeSubDomains; preload'],
           '/*.js': ['Cache-Control: public, max-age=31536000, immutable'],
         },
       },
