@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'luca-steeb',
-        short_name: 'luca-steeb',
+        name: 'Luca Steeb',
+        short_name: 'Luca Steeb',
         start_url: '/',
         background_color: '#020c1b',
         theme_color: '#0a192f',

@@ -4,7 +4,7 @@ module.exports = {
     'I am a freelancer specializing in creating cloud and SaaS software, using cutting-edge technologies for frontend, backend, dev ops, and more.',
   siteUrl: 'https://luca-steeb.com',
   siteLanguage: 'en_US',
-  siteImage: 'https://luca-steeb.com/og.png',
+  siteImage: '/icons/icon-256x256.png',
 
   googleVerification: 'zXuUDqaJPYKMclGSBRUESUB0M5wXzRLfohg1ShrCRSY',
 

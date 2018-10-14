@@ -5,6 +5,8 @@ cover: './lp.jpg'
 external: ''
 tech:
   - Node.js
+  - Vue
+  - Gatsby
   - Kubernetes
   - Ceph
   - Anycast
