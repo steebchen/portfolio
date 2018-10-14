@@ -54,7 +54,7 @@ module.exports = {
   ],
 
   twitterHandle: '@steebchen',
-  googleAnalyticsID: 'TODO',
+  googleAnalyticsID: 'UA-54289597-7',
 
   headerHeight: 100,
 
