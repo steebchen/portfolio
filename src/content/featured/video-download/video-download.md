@@ -9,8 +9,8 @@ tech:
   - Typescript
   - Node.js
   - Express
-  - Marko
-  - ffmpeg
+  - Networking
+  - DevOps
 ---
 
 Download any video or audio to your device, for free. Supports downloading from more than 2500 websites.

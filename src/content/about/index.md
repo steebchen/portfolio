@@ -8,7 +8,7 @@ skills:
   - Node.js
   - React
   - Vue
-  - Gatsby
+  - Go
   - Kubernetes
   - GraphQL
   - SQL & NoSQL
