@@ -68,16 +68,6 @@ const AvatarContainer = styled.div`
   position: relative;
   border-radius: ${theme.borderRadius};
   margin-left: -20px;
-  &:hover,
-  &:focus {
-    &:after {
-      top: 15px;
-      left: 15px;
-    }
-    ${Avatar} {
-      filter: none;
-    }
-  }
   &:before {
     content: '';
     position: absolute;
@@ -130,11 +120,11 @@ class About extends Component {
                 frontmatter.skills.map((skill, i) => <Skill key={i}>{skill}</Skill>)}
             </SkillsContainer>
           </ContentContainer>
-          {/* <PicContainer>
+          <PicContainer>
             <AvatarContainer>
               <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" />
             </AvatarContainer>
-          </PicContainer> */}
+          </PicContainer>
         </FlexContainer>
       </AboutContainer>
     );
