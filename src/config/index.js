@@ -10,7 +10,7 @@ module.exports = {
 
   name: 'Luca Steeb',
   location: 'Stuttgart, Germany',
-  email: 'contact@luca-steeb.con',
+  email: 'contact@luca-steeb.com',
   socialMedia: [
     {
       name: 'Github',
