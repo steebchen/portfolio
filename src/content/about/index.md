@@ -14,8 +14,6 @@ skills:
   - SQL & NoSQL
 ---
 
-I always loved coding. When I was 12, I started using microcontrollers with visual programming software.
-The most exciting thing about my 18th birthday was officially registering as a freelancer. 3 years later,
-I concentrate on building cloud software for businesses.
+I always loved coding. When I was 12, I started using microcontrollers with visual programming software. The most exciting thing about my 18th birthday was officially registering as a freelancer. Years later, I'm still passionate about programming and build my own apps while consulting other businesses.
 
 I primarily use the following technologies, tools and libraries:
