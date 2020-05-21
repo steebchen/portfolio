@@ -11,6 +11,7 @@ module.exports = {
   name: 'Luca Steeb',
   location: 'Stuttgart, Germany',
   email: 'contact@luca-steeb.com',
+  meetingLink: 'https://calendly.com/steebchen/intro',
   socialMedia: [
     {
       name: 'Github',

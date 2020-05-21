@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import { email } from '../config';
+import { email, meetingLink } from '../config';
 
 import styled from 'styled-components';
 import { theme, mixins, media, Section, A } from '../styles';
@@ -52,7 +52,9 @@ const Blurb = styled.div`
     ${mixins.inlineLink};
   }
 `;
-const EmailButton = styled.div``;
+const EmailButton = styled.a`
+  margin-right: 1em;
+`;
 const EmailLink = styled(A)`
   ${mixins.bigButton};
   font-size: ${theme.fontSizes.smallish};
@@ -90,8 +92,13 @@ class Hero extends Component {
         <EmailLink href={`mailto:${email}`}>Get In Touch</EmailLink>
       </EmailButton>
     );
+    const six = () => (
+      <EmailButton style={{ transitionDelay: '600ms' }}>
+        <EmailLink href={meetingLink}>Schedule a meeting</EmailLink>
+      </EmailButton>
+    );
 
-    const items = [one, two, three, four, five];
+    const items = [one, two, three, four, five, six];
 
     return (
       <HeroContainer>

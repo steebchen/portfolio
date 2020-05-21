@@ -2,7 +2,6 @@
 title: 'Hi! I am'
 name: 'Luca Steeb'
 subtitle: 'I build cloud software.'
-contactText: 'Get In Touch'
 ---
 
 I'm a full stack developer with experience ranging from frontend over backend to mobile development and I have written successful apps with technologies in all of these sections.

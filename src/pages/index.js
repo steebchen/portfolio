@@ -47,7 +47,6 @@ export const query = graphql`
             title
             name
             subtitle
-            contactText
           }
           html
         }

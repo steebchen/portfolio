@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { srConfig, email } from '../config';
+import { srConfig, email, meetingLink } from '../config';
 
 import styled from 'styled-components';
 import { theme, mixins, media, Section, H3, A, P } from '../styles';
@@ -43,6 +43,7 @@ const Title = styled.h4`
 const EmailLink = styled(A)`
   ${mixins.bigButton};
   margin-top: 50px;
+  margin-right: 1em;
 `;
 
 class Contact extends Component {
@@ -65,6 +66,9 @@ class Contact extends Component {
         <P dangerouslySetInnerHTML={{ __html: html }} />
         <EmailLink href={`mailto:${email}`} target="_blank" rel="nofollow noopener noreferrer">
           Say Hello
+        </EmailLink>
+        <EmailLink href={meetingLink} target="_blank" rel="nofollow noopener noreferrer">
+          Schedule a meeting
         </EmailLink>
       </ContactContainer>
     );
