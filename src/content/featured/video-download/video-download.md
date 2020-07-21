@@ -1,6 +1,6 @@
 ---
 date: '2016-01-01'
-title: 'Video download'
+title: 'Video download (SOLD! 💰)'
 cover: './lp.jpg'
 stats: '100.000.000+ pageviews'
 github: ''
