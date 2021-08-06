@@ -1,12 +1,10 @@
 ---
 title: 'About Me'
 skills:
-  - JavaScript
-  - HTML & CSS
-  - TypeScript
-  - Node.js
-  - React
-  - Vue
+  - JavaScript/TypeScript
+  - NodeJS
+  - React/Angular/Vue
+  - Flutter/Dart
   - Go
   - Kubernetes
   - GraphQL
