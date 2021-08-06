@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { srConfig } from '../config';
 
@@ -147,73 +146,62 @@ class Projects extends Component {
       <ProjectsContainer>
         <ProjectsTitle innerRef={el => (this.projects = el)}>Other Projects</ProjectsTitle>
         <ProjectsGrid>
-          <TransitionGroup className="projects">
+          <div className="projects">
             {projectsToShow &&
               projectsToShow.map(({ node }, i) => (
-                <CSSTransition
-                  key={i}
-                  classNames="fadeup"
-                  timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}>
-                  <Project
-                    key={i}
-                    innerRef={el => (this.revealRefs[i] = el)}
-                    style={{
-                      transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}>
-                    <ProjectInner>
-                      <ProjectTop>
-                        <ProjectHeader>
-                          <Folder>
-                            <IconFolder />
-                          </Folder>
-                          <Links>
-                            {node.frontmatter.github && (
-                              <IconLink
-                                href={node.frontmatter.github}
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                                aria-label="Github Link">
-                                <IconGithub />
-                              </IconLink>
-                            )}
-                            {node.frontmatter.external && (
-                              <IconLink
-                                href={node.frontmatter.external}
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                                aria-label="External Link">
-                                <IconExternal />
-                              </IconLink>
-                            )}
-                          </Links>
-                        </ProjectHeader>
-                        <ProjectName>
-                          {node.frontmatter.external ? (
-                            <ProjectLink
+                <Project key={i} innerRef={el => (this.revealRefs[i] = el)}>
+                  <ProjectInner>
+                    <ProjectTop>
+                      <ProjectHeader>
+                        <Folder>
+                          <IconFolder />
+                        </Folder>
+                        <Links>
+                          {node.frontmatter.github && (
+                            <IconLink
+                              href={node.frontmatter.github}
+                              target="_blank"
+                              rel="nofollow noopener noreferrer"
+                              aria-label="Github Link">
+                              <IconGithub />
+                            </IconLink>
+                          )}
+                          {node.frontmatter.external && (
+                            <IconLink
                               href={node.frontmatter.external}
                               target="_blank"
                               rel="nofollow noopener noreferrer"
-                              aria-label="Visit Website">
-                              {node.frontmatter.title}
-                            </ProjectLink>
-                          ) : (
-                            node.frontmatter.title
+                              aria-label="External Link">
+                              <IconExternal />
+                            </IconLink>
                           )}
-                        </ProjectName>
-                        <ProjectDescription dangerouslySetInnerHTML={{ __html: node.html }} />
-                      </ProjectTop>
-                      <ProjectBottom>
-                        <TechList>
-                          {node.frontmatter.tech &&
-                            node.frontmatter.tech.map((tech, i) => <li key={i}>{tech}</li>)}
-                        </TechList>
-                      </ProjectBottom>
-                    </ProjectInner>
-                  </Project>
-                </CSSTransition>
+                        </Links>
+                      </ProjectHeader>
+                      <ProjectName>
+                        {node.frontmatter.external ? (
+                          <ProjectLink
+                            href={node.frontmatter.external}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="Visit Website">
+                            {node.frontmatter.title}
+                          </ProjectLink>
+                        ) : (
+                          node.frontmatter.title
+                        )}
+                      </ProjectName>
+                      <ProjectDescription dangerouslySetInnerHTML={{ __html: node.html }} />
+                    </ProjectTop>
+                    <ProjectBottom>
+                      <TechList>
+                        {node.frontmatter.tech &&
+                          node.frontmatter.tech.map((tech, i) => <li key={i}>{tech}</li>)}
+                      </TechList>
+                    </ProjectBottom>
+                  </ProjectInner>
+                </Project>
               ))}
-          </TransitionGroup>
+          </div>
         </ProjectsGrid>
 
         {projects.length > GRID_LIMIT && (

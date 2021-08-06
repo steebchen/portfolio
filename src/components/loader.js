@@ -62,28 +62,28 @@ class Loader extends Component {
     loader
       .add({
         targets: '#logo path',
-        delay: 500,
-        duration: 2000,
+        delay: 100,
+        duration: 200,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
         targets: '#logo #B',
-        duration: 800,
+        duration: 200,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
       .add({
         targets: '#logo',
-        delay: 700,
-        duration: 300,
+        delay: 200,
+        duration: 100,
         easing: 'easeInOutQuart',
         opacity: 0,
         scale: 0.1,
       })
       .add({
         targets: '.loader',
-        duration: 200,
+        duration: 100,
         easing: 'easeInOutQuart',
         opacity: 0,
         zIndex: -1,

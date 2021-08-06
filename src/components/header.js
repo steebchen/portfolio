@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
-import { throttle } from '../utils';
 
 import { headerHeight } from '../config';
 
@@ -20,7 +18,6 @@ const HeaderContainer = styled.header`
   top: 0;
   padding: 0px 50px;
   background-color: ${theme.colors.navy};
-  transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
   pointer-events: auto !important;
@@ -175,14 +172,9 @@ class Header extends Component {
     lastScrollTop: 0,
     scrollDirection: 'none',
     menuOpen: false,
-    isMounted: false,
   };
 
   componentDidMount() {
-    setTimeout(() => this.setState({ isMounted: true }), 100);
-
-    window.addEventListener('scroll', () => throttle(this.handleScroll()));
-    window.addEventListener('resize', () => throttle(this.handleResize()));
     window.addEventListener('keydown', () => this.handleKeydown());
   }
 
@@ -249,7 +241,7 @@ class Header extends Component {
   };
 
   render() {
-    const { scrollDirection, menuOpen, isMounted } = this.state;
+    const { scrollDirection, menuOpen } = this.state;
     const { location, navLinks } = this.props;
     const isHome = location && location.pathname === '/';
 
@@ -259,60 +251,39 @@ class Header extends Component {
           <body className={menuOpen ? 'blur' : ''} />
         </Helmet>
         <Navbar>
-          <TransitionGroup>
-            {isMounted && (
-              <CSSTransition classNames="fade" timeout={3000}>
-                <Logo>
-                  <LogoLink to="/" aria-label="Home">
-                    <IconLogo />
-                  </LogoLink>
-                </Logo>
-              </CSSTransition>
-            )}
-          </TransitionGroup>
+          <Logo>
+            <LogoLink to="/" aria-label="Home">
+              <IconLogo />
+            </LogoLink>
+          </Logo>
 
-          <TransitionGroup>
-            {isMounted && (
-              <CSSTransition classNames="fade" timeout={3000}>
-                <Hamburger onClick={this.toggleMenu}>
-                  <HamburgerBox>
-                    <HamburgerInner menuOpen={menuOpen} />
-                  </HamburgerBox>
-                </Hamburger>
-              </CSSTransition>
-            )}
-          </TransitionGroup>
+          <Hamburger onClick={this.toggleMenu}>
+            <HamburgerBox>
+              <HamburgerInner menuOpen={menuOpen} />
+            </HamburgerBox>
+          </Hamburger>
 
           <NavLinks>
             {isHome && (
               <NavList>
-                <TransitionGroup>
-                  {isMounted &&
-                    navLinks &&
+                <div>
+                  {navLinks &&
                     navLinks.map(({ url, name }, i) => (
-                      <CSSTransition key={i} classNames="fadedown" timeout={3000}>
-                        <NavListItem key={i} style={{ transitionDelay: `${i * 100}ms` }}>
-                          <NavLink href={url}>{name}</NavLink>
-                        </NavListItem>
-                      </CSSTransition>
+                      <NavListItem key={i}>
+                        <NavLink href={url}>{name}</NavLink>
+                      </NavListItem>
                     ))}
-                </TransitionGroup>
+                </div>
               </NavList>
             )}
-            <TransitionGroup>
-              {isMounted && (
-                <CSSTransition classNames="fadedown" timeout={3000}>
-                  <ResumeButton style={{ transitionDelay: `600ms` }}>
-                    <ResumeLink
-                      href="https://stackoverflow.com/story/steebchen"
-                      target="_blank"
-                      rel="nofollow noopener noreferrer">
-                      Resume
-                    </ResumeLink>
-                  </ResumeButton>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
+            <ResumeButton>
+              <ResumeLink
+                href="https://stackoverflow.com/story/steebchen"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                Resume
+              </ResumeLink>
+            </ResumeButton>
           </NavLinks>
         </Navbar>
 

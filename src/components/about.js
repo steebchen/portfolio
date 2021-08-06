@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 
 import { srConfig } from '../config';
 
@@ -45,54 +44,6 @@ const Skill = styled.li`
     color: ${theme.colors.green};
     font-size: ${theme.fontSizes.small};
     line-height: 12px;
-  }
-`;
-const PicContainer = styled.div`
-  position: relative;
-  width: 40%;
-  max-width: 300px;
-  margin-left: 60px;
-  ${media.tablet`margin: 60px auto 0;`};
-  ${media.phablet`width: 70%;`};
-`;
-const Avatar = styled(Img)`
-  width: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-  position: relative;
-  border-radius: ${theme.borderRadius};
-  transition: ${theme.transition};
-`;
-const AvatarContainer = styled.div`
-  width: 100%;
-  position: relative;
-  border-radius: ${theme.borderRadius};
-  margin-left: -20px;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: ${theme.transition};
-    background-color: ${theme.colors.navy};
-    border-radius: ${theme.borderRadius};
-  }
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 2px solid ${theme.colors.green};
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: -1;
-    transition: ${theme.transition};
-    border-radius: ${theme.borderRadius};
   }
 `;
 

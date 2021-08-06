@@ -130,7 +130,6 @@ const ImgContainer = styled.div`
   border-radius: 2px;
   grid-column: 6 / -1;
   grid-row: 1 / -1;
-  transition: ${theme.transition};
   ${media.tablet`height: 100%;`};
   ${media.thone`
     grid-column: 1 / -1;

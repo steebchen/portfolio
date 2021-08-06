@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { email, meetingLink } from '../config';
 
@@ -66,50 +65,24 @@ class Hero extends Component {
     data: PropTypes.array.isRequired,
   };
 
-  state = {
-    isMounted: false,
-  };
-
-  componentDidMount() {
-    setTimeout(() => this.setState({ isMounted: true }), 1000);
-  }
-
   render() {
     const { data } = this.props;
-    const { isMounted } = this.state;
     const { frontmatter, html } = data[0].node;
-
-    const one = () => <Hi style={{ transitionDelay: '100ms' }}>{frontmatter.title}</Hi>;
-    const two = () => <Name style={{ transitionDelay: '200ms' }}>{frontmatter.name}.</Name>;
-    const three = () => (
-      <Subtitle style={{ transitionDelay: '300ms' }}>{frontmatter.subtitle}</Subtitle>
-    );
-    const four = () => (
-      <Blurb style={{ transitionDelay: '400ms' }} dangerouslySetInnerHTML={{ __html: html }} />
-    );
-    const five = () => (
-      <EmailButton style={{ transitionDelay: '500ms' }}>
-        <EmailLink href={`mailto:${email}`}>Get In Touch</EmailLink>
-      </EmailButton>
-    );
-    const six = () => (
-      <EmailButton style={{ transitionDelay: '600ms' }}>
-        <EmailLink href={meetingLink}>Schedule a meeting</EmailLink>
-      </EmailButton>
-    );
-
-    const items = [one, two, three, four, five, six];
 
     return (
       <HeroContainer>
-        <TransitionGroup>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={3000}>
-                {item}
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
+        <Hi>{frontmatter.title}</Hi>
+        <Name>{frontmatter.name}.</Name>
+        <Subtitle>{frontmatter.subtitle}</Subtitle>
+        <Blurb dangerouslySetInnerHTML={{ __html: html }} />
+        <div>
+          <EmailButton>
+            <EmailLink href={`mailto:${email}`}>Get In Touch</EmailLink>
+          </EmailButton>
+          <EmailButton>
+            <EmailLink href={meetingLink}>Schedule a meeting</EmailLink>
+          </EmailButton>
+        </div>
       </HeroContainer>
     );
   }

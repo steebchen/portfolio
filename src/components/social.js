@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { socialMedia } from '../config';
 
@@ -44,51 +43,35 @@ const SocialLink = styled(A)`
 `;
 
 class Social extends Component {
-  state = {
-    isMounted: false,
-  };
-
-  componentDidMount() {
-    setTimeout(() => this.setState({ isMounted: true }), 2000);
-  }
-
   render() {
-    const { isMounted } = this.state;
-
     return (
       <SocialContainer>
-        <TransitionGroup>
-          {isMounted && (
-            <CSSTransition timeout={3000} classNames="fade">
-              <SocialItemList>
-                {socialMedia &&
-                  socialMedia.map(({ url, name }, i) => (
-                    <SocialItem key={i}>
-                      <SocialLink
-                        href={url}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label={name}>
-                        {name === 'Github' ? (
-                          <IconGithub />
-                        ) : name === 'Linkedin' ? (
-                          <IconLinkedin />
-                        ) : name === 'Instagram' ? (
-                          <IconInstagram />
-                        ) : name === 'Stackoverflow' ? (
-                          <IconStackoverflow />
-                        ) : name === 'Twitter' ? (
-                          <IconTwitter />
-                        ) : (
-                          '–'
-                        )}
-                      </SocialLink>
-                    </SocialItem>
-                  ))}
-              </SocialItemList>
-            </CSSTransition>
-          )}
-        </TransitionGroup>
+        <SocialItemList>
+          {socialMedia &&
+            socialMedia.map(({ url, name }, i) => (
+              <SocialItem key={i}>
+                <SocialLink
+                  href={url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  aria-label={name}>
+                  {name === 'Github' ? (
+                    <IconGithub />
+                  ) : name === 'Linkedin' ? (
+                    <IconLinkedin />
+                  ) : name === 'Instagram' ? (
+                    <IconInstagram />
+                  ) : name === 'Stackoverflow' ? (
+                    <IconStackoverflow />
+                  ) : name === 'Twitter' ? (
+                    <IconTwitter />
+                  ) : (
+                    '–'
+                  )}
+                </SocialLink>
+              </SocialItem>
+            ))}
+        </SocialItemList>
       </SocialContainer>
     );
   }
