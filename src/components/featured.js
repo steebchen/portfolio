@@ -217,11 +217,7 @@ class Featured extends Component {
                   <FeaturedLabel>Featured Project</FeaturedLabel>
                   <ProjectName>
                     {node.frontmatter.external ? (
-                      <A
-                        href={node.frontmatter.external}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link">
+                      <A href={node.frontmatter.external} target="_blank">
                         {node.frontmatter.title}
                       </A>
                     ) : (
@@ -242,20 +238,12 @@ class Featured extends Component {
 
                   <Links>
                     {node.frontmatter.github && (
-                      <A
-                        href={node.frontmatter.github}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="Github Link">
+                      <A href={node.frontmatter.github} target="_blank">
                         <IconGithub />
                       </A>
                     )}
                     {node.frontmatter.external && (
-                      <A
-                        href={node.frontmatter.external}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link">
+                      <A href={node.frontmatter.external} target="_blank">
                         <IconExternal />
                       </A>
                     )}
