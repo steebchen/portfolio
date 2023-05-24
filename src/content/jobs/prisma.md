@@ -2,7 +2,7 @@
 date: '2021-09-25'
 title: 'Go Developer'
 company: 'Prisma'
-range: '2019 – now'
+range: '2019 – 2022'
 url: 'https://prisma.io'
 ---
 
