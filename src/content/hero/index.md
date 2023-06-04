@@ -1,7 +1,7 @@
 ---
 title: 'Hi! I am'
 name: 'Luca.'
-subtitle: 'I provide IT consulting at its finest'
+subtitle: 'I offer top-notch IT consulting services.'
 ---
 
 I help companies and people write better code, manage and secure their infrastructure and make their stack more robust.
