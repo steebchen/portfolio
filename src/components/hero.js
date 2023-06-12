@@ -26,7 +26,7 @@ const Hi = styled.h1`
   ${media.tablet`font-size: ${theme.fontSizes.smallish};`};
 `;
 const Name = styled.h2`
-  font-size: 80px;
+  font-size: 85px;
   line-height: 1.1;
   margin: 0;
   ${media.desktop`font-size: 70px;`};
@@ -35,7 +35,7 @@ const Name = styled.h2`
   ${media.phone`font-size: 40px;`};
 `;
 const Subtitle = styled.h3`
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1.1;
   color: ${theme.colors.slate};
   ${media.desktop`font-size: 70px;`};
@@ -72,7 +72,7 @@ class Hero extends Component {
     return (
       <HeroContainer>
         <Hi>{frontmatter.title}</Hi>
-        <Name>{frontmatter.name}.</Name>
+        <Name>{frontmatter.name}</Name>
         <Subtitle>{frontmatter.subtitle}</Subtitle>
         <Blurb dangerouslySetInnerHTML={{ __html: html }} />
         <div>

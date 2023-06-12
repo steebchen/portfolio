@@ -1,9 +1,9 @@
 ---
 title: 'Hi! I am'
-name: 'Luca Steeb'
-subtitle: 'I build cloud software.'
+name: 'Luca.'
+subtitle: 'I offer top-notch IT consulting services.'
 ---
 
-I'm a full stack developer with experience ranging from frontend over backend to mobile development and I have written successful apps with technologies in all of these sections.
+I help companies and people write better code, manage and secure their infrastructure and make their stack more robust.
 
-When I'm not working on my own projects, I may be available for consulting. I help companies manage and write better code, make their software more robust, and coach other people how to be more efficient.
+My main way of doing is by maintaining the [Prisma Go client](https://github.com/prisma/prisma-client-go), which makes working with databases in Go delightful.
