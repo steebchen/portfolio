@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { email, meetingLink } from '../config';
+import { email } from '../config';
 
 import styled from 'styled-components';
 import { theme, mixins, media, Section, A } from '../styles';
@@ -78,9 +78,6 @@ class Hero extends Component {
         <div>
           <EmailButton>
             <EmailLink href={`mailto:${email}`}>Get In Touch</EmailLink>
-          </EmailButton>
-          <EmailButton>
-            <EmailLink href={meetingLink}>Schedule a meeting</EmailLink>
           </EmailButton>
         </div>
       </HeroContainer>
