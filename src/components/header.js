@@ -153,6 +153,10 @@ const NavLink = styled(AnchorLink)`
   ${mixins.link};
   padding: 12px 10px;
 `;
+const NavLinkRoute = styled(Link)`
+  ${mixins.link};
+  padding: 12px 10px;
+`;
 const ResumeButton = styled.div``;
 const ResumeLink = styled(A)`
   ${mixins.smallButton};
@@ -270,7 +274,11 @@ class Header extends Component {
                   {navLinks &&
                     navLinks.map(({ url, name }, i) => (
                       <NavListItem key={i}>
-                        <NavLink href={url}>{name}</NavLink>
+                        {url.startsWith('/') ? (
+                          <NavLinkRoute to={url}>{name}</NavLinkRoute>
+                        ) : (
+                          <NavLink href={url}>{name}</NavLink>
+                        )}
                       </NavListItem>
                     ))}
                 </div>

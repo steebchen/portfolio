@@ -1,0 +1,41 @@
+[    3234ms] [INFO] %cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold @ http://localhost:8000/commons.js:43714
+[    3310ms] [LOG] [HMR] connected @ http://localhost:8000/commons.js:64300
+[    3322ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s A, SideEffect(NullComponent), layout__SkipToContent, loader__LoaderContainer, loader__LogoWrapper @ http://localhost:8000/commons.js:18808
+[    3322ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s A, layout__SkipToContent, loader__LoaderContainer, loader__LogoWrapper @ http://localhost:8000/commons.js:18808
+[    4253ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Main, Nav, P, Ul, blog__BlogContainer, blog__PostDate, blog__PostDescription, blog__PostItem, blog__PostLink, blog__PostList, blog__PostTitle, blog__Subtitle, blog__Title, email__EmailContainer, email__EmailLink, email__EmailLinkWrapper, footer__Copy, footer__FooterContainer, footer__GithubLink, footer__SocialContainer, footer__SocialItem, footer__SocialItemList, footer__SocialLink, header__Hamburger, header__HamburgerBox, header__HamburgerInner, header__HeaderContainer, header__Logo, header__LogoLink, header__NavLinks, header__Navbar, header__ResumeButton, header__ResumeLink, menu__MenuContainer, menu__NavLinks, menu__ResumeLink, menu__Sidebar, social__SocialContainer, social__SocialItem, social__SocialItemList, social__SocialLink @ http://localhost:8000/commons.js:18808
+[    4253ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s Main, Nav, P, Ul, blog__BlogContainer, blog__PostDate, blog__PostDescription, blog__PostItem, blog__PostLink, blog__PostList, blog__PostTitle, blog__Subtitle, blog__Title, email__EmailContainer, email__EmailLink, email__EmailLinkWrapper, footer__Copy, footer__FooterContainer, footer__GithubLink, footer__SocialContainer, footer__SocialItem, footer__SocialItemList, footer__SocialLink, header__Hamburger, header__HamburgerBox, header__HamburgerInner, header__HeaderContainer, header__Logo, header__LogoLink, header__NavLinks, header__Navbar, header__ResumeButton, header__ResumeLink, menu__MenuContainer, menu__NavLinks, menu__ResumeLink, menu__Sidebar, social__SocialContainer, social__SocialItem, social__SocialItemList, social__SocialLink @ http://localhost:8000/commons.js:18808
+[    6457ms] [WARNING] Warning: componentWillMount has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move code with side effects to componentDidMount, and set initial state in the constructor.
+* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s post__BackLink, post__PostContainer, post__PostContent, post__PostDate, post__PostHeader, post__Title @ http://localhost:8000/commons.js:18808
+[    6457ms] [WARNING] Warning: componentWillReceiveProps has been renamed, and is not recommended for use. See https://fb.me/react-unsafe-component-lifecycles for details.
+
+* Move data fetching code or side effects to componentDidUpdate.
+* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://fb.me/react-derived-state
+* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 17.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.
+
+Please update the following components: %s post__BackLink, post__PostContainer, post__PostContent, post__PostDate, post__PostHeader, post__Title @ http://localhost:8000/commons.js:18808
