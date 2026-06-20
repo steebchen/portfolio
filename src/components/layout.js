@@ -54,11 +54,32 @@ class Layout extends Component {
     location: PropTypes.object,
   };
 
-  state = {
-    isLoading: true,
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: this.shouldShowLoader(props),
+    };
+  }
+
+  // The loader is a one-time intro: only on the home page, and only once
+  // per browser session. Other pages (e.g. /blog) render straight away.
+  shouldShowLoader = props => {
+    const isHome = props.location && props.location.pathname === '/';
+    if (!isHome) {
+      return false;
+    }
+    if (typeof window === 'undefined') {
+      return true;
+    }
+    return !window.sessionStorage.getItem('hasLoaded');
   };
 
-  finishLoading = () => this.setState({ isLoading: false });
+  finishLoading = () => {
+    if (typeof window !== 'undefined') {
+      window.sessionStorage.setItem('hasLoaded', 'true');
+    }
+    this.setState({ isLoading: false });
+  };
 
   render() {
     const { children, location } = this.props;
