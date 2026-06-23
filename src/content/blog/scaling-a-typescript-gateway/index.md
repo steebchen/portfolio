@@ -48,13 +48,17 @@ A gateway holds the keys to real money, and a customer's runaway loop can burn t
 
 Upstreams degrade. A model gets slow, a region starts erroring, a provider has an incident. The gateway has to notice and fail over so the customer's call still lands somewhere that works — detect, reroute, and don't retry yourself into a thundering herd. That was its own multi-week saga.
 
-## So... was TypeScript a mistake?
+## Why TypeScript was the right call
 
-Honest answer: maybe, in a vacuum. It's probably not the most performant choice for a raw proxy, and I won't pretend otherwise.
+Here's the thing the "good luck" crowd skips: TypeScript was never the cost. It was the leverage.
 
-But it was never the thing standing between us and 100B tokens. It was _good enough_ that it never became the constraint — and picking it let us move fast where it counted. One language across the whole monorepo. pnpm and turbo. Shared types between the Next.js app and the Hono API, so a breaking change to the gateway's contract shows up as a red squiggle in the dashboard before it ever ships.
+Everything we build is one TypeScript monorepo — the gateway, the dashboard, the public API, the billing logic. One language, one toolchain, pnpm and turbo, one mental model. An engineer can follow a request from the Next.js dashboard through the Hono API into the gateway without ever switching context or re-learning a stack. The types are shared end to end, so a breaking change to the gateway's contract shows up as a red squiggle in the dashboard before it ever ships.
 
-The runtime everyone fixates on is a rounding error — on the bill and on the calendar. Optimizing it first would have been premature. The bottleneck was never where the internet assumed.
+Now picture the "fast" alternative: a separate, lower-level language for the gateway alone. Congratulations, you've bought a rounding error of per-core throughput — and signed up for a second toolchain, a second set of idioms, a second deploy and on-call story, a serialization boundary between the gateway and everything it shares, and a context-switch tax every engineer pays forever. That complexity is real, permanent, and compounding. The performance it buys back is theoretical and, for a proxy, mostly irrelevant.
+
+TypeScript handled the throughput without breaking a sweat. It never became the constraint — and staying in one language is exactly what let us pour our time into the parts that did matter: the metering, the resilience, the budgets, the failover.
+
+The runtime everyone fixates on is a rounding error — on the bill and on the calendar. The win wasn't picking a faster language. It was _not_ fragmenting the stack to chase a number that was never the bottleneck.
 
 "Good luck with high RPS," it turns out, had almost nothing to do with RPS.
 
