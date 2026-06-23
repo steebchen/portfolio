@@ -11,7 +11,9 @@
     "onlyBuiltDependencies": [
       "sharp",
       "fsevents",
-      "esbuild"
+      "esbuild",
+      "mozjpeg",
+      "pngquant-bin"
     ]
   },
   "scripts": {
