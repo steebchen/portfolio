@@ -9,6 +9,8 @@ When we launched [LLMGateway](https://llmgateway.io), a competitor wished us luc
 
 It's the obvious bet. TypeScript, in front of every LLM call, on the hot path of a high-throughput proxy? Bold. Go rewrite incoming.
 
+But the choice was deliberate. Our whole product is one TypeScript monorepo — dashboard, API, billing — and we weren't about to bolt on a second language just for the gateway. One stack, one toolchain, shared types end to end. We bet the runtime would be fast enough, and that staying unified would pay off everywhere it counted.
+
 We're now moving around 100 billion tokens a month at over \$100k in spend. Here's the part nobody wants to hear: the runtime was the least of it.
 
 ## The thesis
