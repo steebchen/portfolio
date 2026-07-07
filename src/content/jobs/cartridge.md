@@ -2,7 +2,7 @@
 date: '2024-07-01'
 title: 'DevOps'
 company: 'Cartridge'
-range: '2023 – 2024'
+range: '2023 – 2025'
 url: 'https://cartridge.gg'
 ---
 
